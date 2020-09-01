@@ -12,6 +12,9 @@ driver = webdriver.Chrome(PATH)
 driver.get("https://techwithtim.net")
 print(driver.title)
 
+
+# tutorial 2
+"""
 search = driver.find_element_by_name("s")
 search.send_keys("test")
 search.send_keys(Keys.RETURN)
@@ -28,6 +31,28 @@ try:
 
 finally:
     driver.quit()
+"""
 
+# tutorial 2
+"""
+link = driver.find_element_by_link_text("Python Programming")
+link.click()
 
+try:
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.LINK_TEXT, "Beginner Python Tutorials"))
+    )
+    element.click()
+    element = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.ID, "sow-button-19310003"))
+    )
+    element.click()
+    driver.back()
+    driver.back()
+    driver.back()
+    driver.forward()
+    driver.forward()s
 
+except:
+    driver.quit()
+"""
